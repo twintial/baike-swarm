@@ -1,0 +1,14 @@
+server:
+  port: 8201
+spring:
+  application:
+    name: baike-gateway
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      discovery:
+        locator: # 路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问。
+          enabled: true
+          lower-case-service-id: true # 使用小写service-id
+# 熔断和限流未配置
