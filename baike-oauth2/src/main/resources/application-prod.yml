@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://baike-registry:8001/eureka/ # 需要配置服务器host
+    registry-fetch-interval-seconds: 10
+  instance:
+    prefer-ip-address: true
